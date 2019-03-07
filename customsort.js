@@ -13,11 +13,17 @@ var students = [
 students.sort(function(a,b){
   if (a.name < b.name){
     return -1;
-  }
-  if (a.name > b.name){
+  } else if (a.name > b.name){
     return 1;
+  } else {
+    if (a.age < b.age){
+      return 1
+    } else if (a.age > b.age){
+      return -1
+    }
+    return 0
   }
-  return 0
 })
+
 
 console.log(students)
